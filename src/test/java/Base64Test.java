@@ -12,7 +12,7 @@ public class Base64Test {
 
     @Test
     public void base64Password(){
-        String original = "losen";
+        String original = "password";
         byte[] originalAsBytes = original.getBytes();
         byte[] base64bytes = Base64.getEncoder().encode(originalAsBytes);
         String base64String = new String(base64bytes);
@@ -23,18 +23,22 @@ public class Base64Test {
 
         Assertions.assertEquals(base64bytes, base64bytes);
         Assertions.assertEquals(originalAsBytes, originalAsBytes);
+        System.out.println(base64String);
     }
 
     @Test
     public void createJwtToken(){
-        String password = "berit";
+        String password = "kalle";
         Key key = Keys.hmacShaKeyFor("XtraHemligKodKommerNogInteAttFungeraIAF".getBytes());
 
             String token = Jwts.builder()
                                 .setSubject(password)
-                                .addClaims(Map.of("berit", "123456"))
+                                .addClaims(Map.of("kalle", "password"))
                                 .signWith(key)
                                 .compact();
             System.out.println(token);
     }
+
+
+
 }
