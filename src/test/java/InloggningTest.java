@@ -1,7 +1,10 @@
+import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+
 public class InloggningTest {
     private final Inloggning inloggning = new Inloggning();
 
-    @Test
+   @Test
     public void userLoggInTest(){
 
         //Given
