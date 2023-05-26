@@ -7,6 +7,7 @@
     <groupId>org.example</groupId>
     <artifactId>TDD_Marie</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -37,6 +38,7 @@
             <version>0.11.2</version>
         </dependency>
     </dependencies>
+
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
